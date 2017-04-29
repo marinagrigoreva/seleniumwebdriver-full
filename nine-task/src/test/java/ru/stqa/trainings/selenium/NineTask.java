@@ -127,7 +127,7 @@ public class NineTask extends TestBase{
 
 
     @Test //Задание 9.2
-    public void SortCTimeZones(){
+    public void SortTimeZones(){
         driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
         driver.findElement(By.name("username")).sendKeys("admin"); //логин
         driver.findElement(By.name("password")).sendKeys("admin"); //пароль
