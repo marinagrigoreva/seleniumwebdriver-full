@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ten-task-firefox.iml" filepath="$PROJECT_DIR$/.idea/modules/ten-task-firefox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ten-task-firefox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ten-task-firefox_main.iml" group="ten-task-firefox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ten-task-firefox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ten-task-firefox_test.iml" group="ten-task-firefox" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,6 @@
+[0430/094619.060:ERROR:process_info.cc(343)] VirtualQueryEx: Отказано в доступе. (0x5)
+[0430/094619.060:ERROR:process_info.cc(564)] ReadMemoryInfo failed
+[0430/094619.061:ERROR:process_reader_win.cc(233)] ReadMemory at 0x69027dc8 of 12 bytes failed: Запрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0430/094619.061:WARNING:process_snapshot_win.cc(68)] ReadMemory ExceptionInformation failed
+[0430/094619.061:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0430/094619.061:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Попытка доступа к процессу, выполняющему процедуру завершения.  (0xc000010a)
