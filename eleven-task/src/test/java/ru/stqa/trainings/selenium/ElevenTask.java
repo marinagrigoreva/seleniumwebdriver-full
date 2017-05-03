@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static org.junit.Assert.assertTrue;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
@@ -34,7 +37,8 @@ public class ElevenTask extends TestBase {
         WebElement selectZoneElem = driver.findElement(By.name("zone_code"));
         Select selectZone = new Select(selectZoneElem);
         selectZone.selectByVisibleText("Hawaii");
-        driver.findElement(By.xpath("//form[@name='customer_form']//input[@name='email']")).sendKeys("marina-grigoryeva@test.ru");
+        String date = new SimpleDateFormat("yyMMddHHmmss").format(new Date());
+        driver.findElement(By.xpath("//form[@name='customer_form']//input[@name='email']")).sendKeys("grigoryeva"+date+"@test.ru");
         driver.findElement(By.name("phone")).sendKeys("+79271234567");
         driver.findElement(By.xpath("//input[@required='required'][@name='password']")).sendKeys("qwer1234");
         driver.findElement(By.name("confirmed_password")).sendKeys("qwer1234");
