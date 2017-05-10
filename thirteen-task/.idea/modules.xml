@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thirteen-task.iml" filepath="$PROJECT_DIR$/.idea/modules/thirteen-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thirteen-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/thirteen-task_main.iml" group="thirteen-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thirteen-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/thirteen-task_test.iml" group="thirteen-task" />
+    </modules>
+  </component>
+</project>
