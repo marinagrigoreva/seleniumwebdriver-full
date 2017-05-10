@@ -38,7 +38,8 @@ public class ThirteenTask extends TestBase{
             wait.until(presenceOfElementLocated(By.xpath("//span[contains(.,'"+count+"')][@class='quantity']")));
             driver.findElement(By.xpath("//a[contains(.,'Home')]")).click(); //Вернуться на главную страницу
         }
-        driver.findElement(By.cssSelector("div#cart")).click(); //Перейти в корзину
+        driver.findElement(By.xpath("//a[contains(@href,'checkout')]")).click(); //Перейти в корзину
+        wait.until(urlContains("checkout"));
         wait.until(numberOfElementsToBe(By.xpath("//button[@name='remove_cart_item']"), 3)); //Дождаться появления трех кнопоку удаления товара
         int j = 0;
         while (j<3){
