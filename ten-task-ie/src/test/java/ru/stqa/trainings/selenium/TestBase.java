@@ -1,14 +1,27 @@
 package ru.stqa.trainings.selenium;
 
+
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
+
+
+import java.io.File;
+import java.net.URL;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**
  * Created by Марина on 30.04.2017.
@@ -18,7 +31,10 @@ public class TestBase {
     public WebDriverWait wait;
 
     @Before
-    public void start(){
+    public void start() throws Exception{
+     /*   driver = new RemoteWebDriver(
+                new java.net.URL("http://10.0.2.15:4444/wd/hub"),
+                DesiredCapabilities.internetExplorer()); */
         driver = new InternetExplorerDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver,30);
