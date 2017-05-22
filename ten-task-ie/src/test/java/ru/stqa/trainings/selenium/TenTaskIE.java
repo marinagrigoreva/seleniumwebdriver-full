@@ -13,6 +13,11 @@ public class TenTaskIE extends TestBase {
 
 
     @Test //а) на главной странице и на странице товара совпадает текст названия товара
+    public void test(){
+        driver.get("http://yandex.ru/");
+    }
+
+    @Test //а) на главной странице и на странице товара совпадает текст названия товара
     public void comparisonName(){
         driver.get(url);
         //Получить название товара на главной странице

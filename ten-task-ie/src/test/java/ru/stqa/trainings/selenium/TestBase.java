@@ -29,15 +29,33 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class TestBase {
     public WebDriver driver;
     public WebDriverWait wait;
-
+    public static final String USERNAME = "marinagrigoryeva1";
+    public static final String AUTOMATE_KEY = "3xGMvxakZAxhxkDc5L89";
+    public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
     @Before
     public void start() throws Exception{
-     /*   driver = new RemoteWebDriver(
-                new java.net.URL("http://10.0.2.15:4444/wd/hub"),
-                DesiredCapabilities.internetExplorer()); */
-        driver = new InternetExplorerDriver();
+
+
+        DesiredCapabilities capability = DesiredCapabilities.chrome();
+        capability.setPlatform(Platform.WINDOWS);
+        capability.setCapability("build", "JUnit - Sample");
+        driver = new RemoteWebDriver(
+                new URL("https://marinagrigoryeva1:3xGMvxakZAxhxkDc5L89@hub-cloud.browserstack.com/wd/hub"),
+                capability
+        );
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver,30);
+
+
+
+
+
+  /*      driver = new RemoteWebDriver(
+                new java.net.URL("http://192.168.0.103:4444/wd/hub"),
+                DesiredCapabilities.internetExplorer()); */
+
+   /*     driver = new InternetExplorerDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver,30); */
     }
 
     public boolean isElementPresent(By locator){
